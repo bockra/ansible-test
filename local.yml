@@ -3,14 +3,9 @@
   remote_user: root
 #  become: true
   tasks:  
-  - name: Install mc
-    apt:
-      name: mc 
-      state: present
-      force: yes
-      update_cache: yes
-      install_recommends: yes
-#  - name: start nginx
-#    service: 
-#      name: nginx
-#      state: started
+  - name: Installing nginx
+    apt: pkg=ngnix state=installed mode=0655
+  - name: Install updated file
+    template: src=templates/index.template dst=/usr/share/nginx/html/index.html
+  - name: starting nginx
+    service: name=nginx state=started
