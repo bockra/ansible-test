@@ -4,8 +4,8 @@
 #  become: true
   tasks:  
   - name: Installing nginx
-    apt: pkg=ngnix state=installed mode=0655
+    apt: pkg=ngnix state=installed
   - name: Install updated file
-    template: src=templates/index.template dst=/usr/share/nginx/html/index.html
+    template: src=templates/index.template dst=/usr/share/nginx/html/index.html mode=0655
   - name: starting nginx
     service: name=nginx state=started
