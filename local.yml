@@ -5,10 +5,11 @@
   tasks:  
   - name: Install mc
     apt:
-      name: mc
+      name: mc 
       state: present
       force: yes
       update_cache: yes
+      install_recommends: yes
 #  - name: start nginx
 #    service: 
 #      name: nginx
