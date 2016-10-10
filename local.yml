@@ -1,11 +1,15 @@
 --
-- name: Install Nginx
-  apt:
-    name: nginx
-    state: present
-    force: yes
-    update_cache: yes
-- name: start nginx
-  service: 
-    name: nginx
-    state: started
+- hosts: list
+  remote_user: bockra
+  become: true
+  tasks:  
+  - name: Install Nginx
+    apt:
+      name: nginx
+      state: present
+      force: yes
+      update_cache: yes
+  - name: start nginx
+    service: 
+      name: nginx
+      state: started
