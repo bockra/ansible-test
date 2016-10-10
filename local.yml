@@ -3,13 +3,13 @@
   remote_user: bockra
   become: true
   tasks:  
-  - name: Install Nginx
+  - name: Install mc
     apt:
-      name: nginx
+      name: mc
       state: present
       force: yes
       update_cache: yes
-  - name: start nginx
-    service: 
-      name: nginx
-      state: started
+#  - name: start nginx
+#    service: 
+#      name: nginx
+#      state: started
