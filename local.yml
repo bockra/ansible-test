@@ -1,6 +1,8 @@
 ---
 - hosts: local
   remote_user: root
+  vars:
+    SUPER_VAR: "VARIABLE"
 #  become: true
   tasks:  
 #  - name: Installing nginx
