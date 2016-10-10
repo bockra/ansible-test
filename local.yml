@@ -1,7 +1,7 @@
 ---
 - hosts: 127.0.0.1
-  remote_user: bockra
-  become: true
+  remote_user: root
+#  become: true
   tasks:  
   - name: Install mc
     apt:
