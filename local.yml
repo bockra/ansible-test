@@ -2,7 +2,8 @@
 - hosts: local
   remote_user: root
   vars:
-    SUPER_VAR: "RAKUTEN!!!"
+    SUPER_VAR: "BOAZ DONT SLEEP"
+
   tasks:  
   - name: Install updated file
     template: src=templates/index.template dest=/usr/share/nginx/html/index.html mode=0655
